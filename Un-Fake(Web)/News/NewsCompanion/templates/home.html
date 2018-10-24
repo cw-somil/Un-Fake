@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+{% load static %}
+ <html>
+	 <head>
+		 <!--Import Google Icon Font-->
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		 <!--Import materialize.css-->
+		 <!---<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>--->
+		 <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+		 <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		 <script type = "text/javascript"
+		 src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+	</script>
+		 <!--Let browser know website is optimized for mobile-->
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		 <style>
+		 html {
+	background:  url(./static/images/asda.png) no-repeat center center fixed;
+	background-size: cover;
+}
+/*body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}*/
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+}
+.container .cube {
+  transform-style: preserve-3d;
+  transform: rotateX(-35deg) rotateY(45deg) translateZ(0px) rotate(0deg);
+  width: 200px;
+  height: 200px;
+  animation: cubespin 4.5s ease infinite;
+}
+.container .cube div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+}
+.container .cube div:before {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  margin: auto;
+  content: '';
+  top: 200px;
+  left: 0;
+  transform-origin: 0% 0%;
+  transform: rotate(0deg);
+  animation: spinintro 4.5s ease-out infinite;
+}
+.container .cube div:after {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  margin: auto;
+  content: '';
+  top: 200px;
+  left: -100px;
+  transform-origin: 100% 0%;
+  transform: rotate(0deg);
+  animation: spinoutro 4.5s ease-out infinite;
+}
+.container .cube .front {
+  background: #e84d80;
+  transform: rotateX(180deg) translateZ(-100px);
+}
+.container .cube .front:before {
+  background: #524061;
+}
+.container .cube .front:after {
+  background: #a9d8c7;
+}
+.container .cube .back {
+  background: #a9d8c7;
+  transform: rotateX(180deg) translateZ(100px) rotate(180deg) rotateY(180deg);
+}
+.container .cube .back:before {
+  background: #e84d80;
+}
+.container .cube .back:after {
+  background: #524061;
+}
+.container .cube .right {
+  background: #e84d80;
+  transform: rotateY(90deg) translateZ(100px) rotate(-90deg) rotateX(180deg);
+  display: block;
+}
+.container .cube .right:before {
+  background: #e84d80;
+}
+.container .cube .right:after {
+  background: #524061;
+}
+.container .cube .left {
+  background: #a9d8c7;
+  transform: rotateY(-90deg) translateZ(100px) rotatex(180deg) rotate(270deg);
+}
+.container .cube .left:before {
+  background: #e84d80;
+}
+.container .cube .left:after {
+  background: #524061;
+}
+.container .cube .top {
+  background: #524061;
+  transform: rotateX(90deg) translateZ(100px) rotate(-90deg) rotateY(180deg);
+}
+.container .cube .top:before {
+  background: #a9d8c7;
+  top: -300px;
+  left: -100px;
+  transform-origin: 100% 100%;
+}
+.container .cube .top:after {
+  background: #e84d80;
+  top: 200px;
+  left: -100px;
+  transform-origin: 100% 0%;
+}
+.container .cube .bottom {
+  background: #e84d80;
+  transform: rotateX(90deg) translateZ(-100px);
+}
+@keyframes spinintro {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    filter: blur(0.5px);
+  }
+  20% {
+    transform: rotate(-90deg);
+  }
+  99% {
+    transform: rotate(-90deg);
+  }
+  99.0001% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes cubespin {
+  0% {
+    transform: rotateX(-35deg) rotateY(45deg) translateZ(0px) rotate(0deg);
+  }
+  20% {
+    transform: rotateX(-35deg) rotateY(45deg) translateZ(0px) rotate(0deg);
+  }
+  40% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateZ(0px) rotate(0deg);
+  }
+  60% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateZ(0px) rotate(0deg);
+  }
+  80% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateZ(0px) rotate(-90deg);
+  }
+  99% {
+    transform: rotateX(-35deg) rotateY(-45deg) translateZ(0px) rotate(-90deg);
+  }
+  99.001% {
+    transform: rotateX(-35deg) rotateY(45deg) translateZ(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(-35deg) rotateY(45deg) translateZ(0px) rotate(0deg);
+  }
+}
+@keyframes spinoutro {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    filter: blur(1px);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  99% {
+    transform: rotate(90deg);
+  }
+  99.001% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
+	 </head>
+
+	 <body>
+
+
+	<nav>
+		 <div class="nav-wrapper" style="margin:0px 10px 0px 10px;">
+			 <a href="{% url 'NewsCompanion:home'%}" style="border-radius: 5px;font-size: 20px;background-color: white	;color:black;margin-left: 20px" class="btn"><b>NewsOrNot</b></a>
+			 <ul id="nav-mobile" class="right hide-on-med-and-down">
+				 <li><a class="btn" href="{% url 'NewsCompanion:about'%}"><b>About Us</b></a></li>
+					<li><a class="btn" href="{% url 'NewsCompanion:pie'%}"><b>How</b></a></li>
+			 </ul>
+		 </div>
+	 </nav>
+
+<br><br>
+	
+	  	<div class='container' style="float:right;margin-top:50px;margin-right: 100px">
+  <div class='cube'>
+    <div class='front'></div>
+    <div class='back'></div>
+    <div class='right'></div>
+    <div class='left'></div>
+    <div class='top'></div>
+    <div class='bottom'></div>
+  </div>
+</div>
+			<h3 style="margin-top: 0px;margin-left: 70px"  class="center-align animated bounceInDown"><b> Analyze news articles</b> </h3>
+<br><br>
+		 <div class="row">
+			 <form action=.{% url 'NewsCompanion:home' %} class="col s12" method="post">
+        {% csrf_token %}
+				 <div class="row">
+					 <div class="input-field col s6 offset-s2 z-depth-2" style=" background-color:white;border-radius: 5px; border: 2px solid border: 1px solid; padding: 10px;margin-left: 260px;margin-top: 0px">
+						 <i class="material-icons prefix">mode_edit</i>
+						 <textarea id="icon_prefix2" class="materialize-textarea" placeholder="Text"></textarea>
+					 </div>
+				 </div>
+		 </div>
+			<h4 style="margin-left: 620px"><b>OR</b></h4><br>
+
+<div class="row ">
+					<div class="file-field input-field z-depth-2" style="margin-left: 350px; background-color:white;border-radius: 5px; border: 2px solid border: 1px solid; padding: 10px;width:600px">
+						<div class="btn col s1" style="width:100px;">
+							<span><i class="material-icons">attach_file</i>File</span>
+							<input type="file">
+						</div>
+						<!-- <div class="col s1 offset-s2">
+								<input type="file">
+								<b>File</b>
+							</div> -->
+						<div class="file-path-wrapper" style="border-radius: 15px; border: 2px solid border: 1px solid;">
+							<input class="file-path validate col s9" type="text">
+						</div>
+					</div>
+</div>
+
+	<br>
+		<div class="row">
+			<button style="margin-left: 575px" class="btn-large waves-effect waves-light col s1 " type="submit" name="action">Submit
+				<i class="material-icons right">send</i>
+			</button>
+		</div>
+	</form>
+
+	
+
+		 <!--JavaScript at end of body for optimized loading-->
+		 <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+	 </body>
+ </html>
