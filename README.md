@@ -38,7 +38,7 @@ Developed a Google Assistant Action named "News Companion" to help users detect 
 
 ### Data used
 
-Stanford pretrained Glove Vectors for Word Embeddings
+Stanford pretrained Glove Vectors for Word Embeddings <br>
 7000 articles labelled fake or real.
 
 ### Future Scope
