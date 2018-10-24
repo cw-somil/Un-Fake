@@ -24,9 +24,9 @@ The Website is developed on Django and we have currently implemented two functio
 2) Image - Input an article image and predict the reliability through OCR and Deep NLP.
 
 The How page shows how much data we have currently predicted has shown has Reliable or Not.
-![Web Screenshot 1](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss1.png){:height="50%" width="50%"}
-![Web Screenshot 2](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss4.png){:height="50%" width="50%"}
-![Web Screenshot 3](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss2.png){:height="50%" width="50%"}
+![Web Screenshot 1](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss1.png width="100" height="100")
+![Web Screenshot 2](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss4.png)
+![Web Screenshot 3](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss2.png)
 
 
 ### Google Action
