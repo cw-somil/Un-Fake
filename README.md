@@ -11,6 +11,12 @@ To create a product for detecting Fake News in Mumbai
 Created a Website as well as a Google Assistant Action for users to easily predict Fake News. Developed a Deep Neural Network using Bidirectional LSTMs to train on 7000 articles labelled as Real/Fake. Gained 90% accuracy after various advanced Text Preprocessing.
 Added functionality of OCR using OpenCV and Tesseract OCR to scan any news article and predict using the Deep NLP model. 
 
+### Model Architecture used
+
+Used Many to one Bidirectional LSTMs to get the prediction.
+
+![Many to one architecture](https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss3.jpg)
+
 ### Website
 
 The Website is developed on Django and we have currently implemented two functionalities,
