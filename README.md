@@ -1,4 +1,7 @@
 # Un-Fake
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Fake News Detector using Deep NLP and OCR 
 ## Winning project for the Enroot Innovate for Mumbai Hackathon
 
