@@ -34,7 +34,7 @@ The How page shows how much data we have currently predicted has shown has Relia
 
 Developed a Google Assistant Action named "News Companion" to help users detect fake news easily. Used the Actions SDK to connect the Google Action to our model and provide the required output.
 
-<img src="https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss2.png" height="70%" width="70%" >
+<img src="https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss5.png" height="70%" width="70%" >
 
 
 ### Future Scope
