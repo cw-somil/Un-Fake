@@ -1,6 +1,6 @@
 # Un-Fake
 Fake News Detector using Deep NLP and OCR 
-# Winning project for the Enroot Innovate for Mumbai Hackathon
+## Winning project for the Enroot Innovate for Mumbai Hackathon
 
 # Problem Statement
 To create a product for detecting Fake News in Mumbai
