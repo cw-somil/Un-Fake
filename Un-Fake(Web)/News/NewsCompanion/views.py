@@ -93,7 +93,22 @@ class Embedding2(Layer):
             input_length = self.input_length
         return (input_shape[0], input_length, self.output_dim)
     
+with open('objs.pkl','rb') as f:  # Python 3: open(..., 'rb')
+    fixed_weights2,word2num_length,X_test,y_test,word2num= pickle.load(f)
+    
+new_model = Sequential()
+new_model.add(Embedding2(word2num_length, 50,
+                    fixed_weights= fixed_weights2)) # , batch_size=batch_size
+new_model.add(Bidirectional(LSTM(64)))
+new_model.add(Dense(1, activation='sigmoid'))
 
+# rmsprop = keras.optimizers.RMSprop(lr=1e-4)
+
+new_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+new_model.load_weights('model.h5')
+new_model._make_predict_function()
+score = new_model.evaluate(X_test,y_test)
+print("%s: %.2f%%" % (new_model.metrics_names[1], score[1]*100))
 
 
 
