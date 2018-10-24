@@ -36,6 +36,10 @@ Developed a Google Assistant Action named "News Companion" to help users detect 
 
 <img src="https://github.com/Somil112/Un-Fake/blob/master/Screenshots/ss5.png" height="40%" width="40%" >
 
+### Data used
+
+Stanford pretrained Glove Vectors for Word Embeddings
+7000 articles labelled fake or real.
 
 ### Future Scope
 We are working on providing better functionalities and improved accuracy to make it as perfect as possible.
