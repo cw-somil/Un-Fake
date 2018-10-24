@@ -1,0 +1,21 @@
+
+{
+  "actions": [
+    {
+      "name": "MAIN",
+      "intent": {
+        "name": "actions.intent.MAIN"
+      },
+      "fulfillment": {
+        "conversationName": "companion"
+      }
+    }
+  ],
+  "conversations": {
+    "companion": {
+      "name": "companion",
+      "url": "https://4bda35da.ngrok.io/news",
+      "fulfillmentApiVersion": 2
+    }
+  }
+}
